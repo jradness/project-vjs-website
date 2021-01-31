@@ -1,4 +1,3 @@
-// const toggleTheme = document.querySelector('[data-theme]');
 const toggleTheme = document.querySelector('.theme-tab');
 const switcher = document.querySelectorAll('.switcher-btn');
 const currentTheme = localStorage.getItem('theme');
@@ -127,8 +126,7 @@ document.addEventListener('keyup', (e) => {
 
 // Carousel
 const base = './assets/images/';
-const slider = document.querySelector(".review-slides");
-const slides = document.querySelectorAll(".item");
+const slides = document.querySelectorAll(".review-item");
 const button = document.querySelectorAll(".slide-ctrl");
 const images = [
 	`${base}1.jpeg`,

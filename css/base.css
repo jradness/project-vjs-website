@@ -78,6 +78,11 @@ button:not(:disabled):not(.disabled) {
 	line-height: 1.05;	
 }
 
+.header-md {
+	font-size: 3rem;
+	letter-spacing: -2px;
+}
+
 .par {
 	font-size: 1.3125rem;
 	line-height: 1.5;
@@ -96,6 +101,10 @@ button:not(:disabled):not(.disabled) {
 
 .container {
 	max-width: 1140px;
+}
+
+.section-spacer {
+	margin: 3rem 0;
 }
 
 .ul-defaults-none {
