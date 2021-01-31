@@ -126,7 +126,7 @@ document.addEventListener('keyup', (e) => {
 
 
 // Carousel
-const base = './assets/images/';
+const base = '../assets/images/';
 const slider = document.querySelector(".review-slides");
 const slides = document.querySelectorAll(".item");
 const button = document.querySelectorAll(".slide-ctrl");

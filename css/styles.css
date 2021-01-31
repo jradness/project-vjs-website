@@ -25,8 +25,6 @@
 	position: relative;
 }
 
-
-
 .theme-body .text {
 	color: #ffffff;
 	font-size: 13px;
@@ -62,8 +60,6 @@
 .btn-group .switcher-btn.active {
 	background-color: #ced4e7;
 }
-
-
 
 .theme-body .theme-tab {
 	width: 30px;
@@ -197,7 +193,11 @@
 	color: #495fef;
 }
 
-
+.portfolio-section {
+	max-width: 1400px;
+	width: 100%;
+	margin: auto;
+}
 .portfolio-grid {
 	display: flex;
 	flex-wrap: wrap;
