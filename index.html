@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+	<link rel="stylesheet" href="css/theme.css">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<title>Document</title>
+</head>
+<body>
+	<div class="theme-panel">
+		<div class="theme-body">
+			<span class="text">Change Theme</span>
+			<label class="theme-switch" for="checkbox">
+				<div class="btn-group">
+					<button id="light" class="switcher-btn" data-toggle="light">Light</button>
+					<button id="dark" class="switcher-btn" data-toggle="dark">Dark</button>
+				</div>
+			</label>
+			<button class="theme-tab">
+				<i class="fas fa-chevron-left"></i>
+			</button>
+		</div>
+		
+	</div>
+	<main class="site-wrapper">
+		<!-- Header -->
+		<header class="site-header">
+			<nav class="navbar">
+				<div class="brand-logo">
+					<a href="index.html"><h2>folio.</h2></a>
+				</div>
+				<div class="navbar-nav">
+					<ul class="ul-defaults-none main-menu">
+						<li class="nav-item">Home</li>
+						<li class="nav-item" data-open="about">About Me</li>
+						<li class="nav-item" data-open="contact">Contact</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+
+		<!-- Hero Section -->
+		<section class="hero-bg">
+			<div class="container">
+				<div class="hero-content">
+					<span class="code-icon">
+						<i class="fas fa-code"></i>
+					</span>
+					<div class="hero-message">
+						<h2 class="header-lg">Code. Eat. Sleep.</h2>
+						<div class="par">I create meaningful solutions for your brands and products.
+							<br/>
+							Give your customers the best experience possible.</div>
+					</div>
+					<div class="btn btn-primary rounded-pill hero-cta">
+						<a href="#" data-open="contact">Let's talk now</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="portfolio-section">
+			<div class="container">
+				<div class="search-container">
+					<label for="search">
+						<input id="search" type="text" class="search-input" placeholder="Search...">
+						<i class="fas fa-search"></i>
+				</label>
+				</div>
+				<ul class="portfolio-filter-nav ul-defaults-none">
+					<li class="filter-link active" data-filter="all">All Work</li>
+					<li class="filter-link" data-filter="web">Web Development</li>
+					<li class="filter-link" data-filter="apps">App Development</li>
+					<li class="filter-link" data-filter="ui">UI Design</li>
+				</ul>
+
+			</div>
+				<div class="container-fluid">
+					<div class="portfolio-grid">
+						
+						
+						<div id="web" class="portfolio-card" data-item="web" data-open="web-1">
+							<div class="card-body">
+								<img src="./assets/images/portfolio-1.jpg" alt="portfolio item">
+								<a href="#" class="card-popup-box">
+									<div>Web Development</div>
+									<h3>Travel Website</h3>
+								</a>
+							</div>
+						</div>
+
+						<div id="web"  class="portfolio-card" data-item="web" data-open="web-2">
+							<div class="card-body">
+								<img src="./assets/images/portfolio-2.jpg" alt="portfolio item">
+								<a href="#" class="card-popup-box">
+									<div>Web Development</div>
+									<h3>Food Website</h3>
+								</a>
+							</div>
+						</div>
+
+						<div id="apps" class="portfolio-card" data-item="apps" data-open="app-1">
+							<div class="card-body">
+								<img src="./assets/images/portfolio-3.jpg" alt="portfolio item">
+								<a href="#" class="card-popup-box">
+									<div>App Development</div>
+									<h3>Travel App</h3>
+								</a>
+							</div>
+						</div>
+
+						<div id="apps" class="portfolio-card" data-item="apps" data-open="app-2">
+							<div class="card-body">
+								<img src="./assets/images/portfolio-4.jpg" alt="portfolio item">
+								<a href="#" class="card-popup-box">
+									<div>App Development</div>
+									<h3>Food App</h3>
+								</a>
+							</div>
+						</div>
+
+						<div id="web" class="portfolio-card" data-item="web" data-open="web-3">
+							<div class="card-body">
+								<img src="./assets/images/portfolio-5.jpg" alt="portfolio item">
+								<a href="#" class="card-popup-box">
+									<div>Web Development</div>
+									<h3>Skate Website</h3>
+								</a>
+							</div>
+						</div>
+
+						<div id="ui"  class="portfolio-card" data-item="ui" data-open="ui-1">
+							<div class="card-body">
+								<img src="./assets/images/portfolio-6.jpg" alt="portfolio item">
+								<a href="#" class="card-popup-box">
+									<div>UI Design</div>
+									<h3>Video Game</h3>
+								</a>
+							</div>
+						</div>
+
+						<div id="ui" class="portfolio-card" data-item="ui" data-open="ui-2">
+							<div class="card-body">
+								<img src="./assets/images/portfolio-7.jpg" alt="portfolio item">
+								<a href="#" class="card-popup-box">
+									<div>UI Design</div>
+									<h3>Marketing</h3>
+								</a>
+							</div>
+						</div>
+
+						<div id="apps" class="portfolio-card" data-item="apps" data-open="app-3">
+							<div class="card-body">
+								<img src="./assets/images/portfolio-8.jpg" alt="portfolio item">
+								<a href="#" class="card-popup-box">
+									<div>App Development</div>
+									<h3>Game App</h3>
+								</a>
+							</div>
+						</div>
+
+
+
+
+
+
+						<!-- <div id="apps" class="portfolio-card" data-item="apps" data-open="app-1">
+							<a href="#" class="card-img">
+								Apps
+								<img src="./assets/images/portfolio-mas-7.jpg" alt="portfolio item">
+							</a>
+							<a href="#" class="card-popup-box">App Popup</a>
+						</div> -->
+					</div>
+				</div>
+		</section>
+
+		<section class="reviews">
+			<div>What People Say</div>
+			<h2>Trusted by Clients.</h2>
+			<div class="review-container">
+				<div class="review-carousel">
+					<img class="item" src="./assets/images/1.jpeg">
+					<img class="item"src="./assets/images/2.jpeg">
+					<img class="item" src="./assets/images/3.jpeg">
+				</div>
+				<div class="slide-ctrl-container flex-j-center">
+					<button class="slide-ctrl">
+						<i class="fas fa-arrow-left"></i>
+					</button>
+					<button class="slide-ctrl">
+						<i class="fas fa-arrow-right"></i>
+					</button>
+				</div>
+			</div>
+		</section>
+	
+		<!-- About Modal -->
+		<div class="full-site-modal about-block" id="about" data-animation="zoomInOut">
+			<div class="page-header container-fluid">
+				<div class="brand-logo">Logo</div>
+				<button class="close-modal" aria-label="close modal" data-close>x</button>
+			</div>
+			<div class="modal-body">ABOUT</div>
+		</div>
+		<!-- Contact Modal -->
+		<div class="full-site-modal contact-block" id="contact" data-animation="zoomInOut">
+			<div class="page-header container-fluid">
+				<div class="brand-logo">Logo</div>
+				<button class="close-modal" aria-label="close modal" data-close>x</button>
+			</div>
+			<div class="modal-body">CONTACT</div>
+		</div>
+
+		<div class="modal" id="web-1" data-animation="slideInOutTop">
+			<div class="modal-dialog">
+				<div class="brand-logo">Logo</div>
+				<button class="close-modal" aria-label="close modal" data-close>x</button>
+				<div class="modal-body">Web Project 1</div>
+			</div>
+		</div>
+
+		<div class="modal" id="app-1" data-animation="slideInOutTop">
+			<div class="modal-dialog">
+				<div class="brand-logo">Logo</div>
+				<button class="close-modal" aria-label="close modal" data-close>x</button>
+				<div class="modal-body">APP Project 1</div>
+			</div>
+		</div>
+
+	</main>
+
+		
+		<script src="js/main.js"></script>
+</body>
+</html>
