@@ -1,0 +1,133 @@
+.page-block {
+	background: var(--bg);
+}
+
+/* About */
+
+.about .modal-body,
+.contact .modal-body {
+	margin-top: 5rem auto 0;
+	padding: 2rem;
+	flex-wrap: wrap;
+	max-width: var(--marquee-width);
+}
+.about-img {
+	flex: 1;	
+	text-align: center;
+}
+
+.about-img img {
+	border-radius: 50rem;
+	width: 100%;
+	max-width: 200px;
+}
+
+.about-text {
+	flex: 1;
+}
+
+.about-text p,
+.about-text .contact-me-block {
+	font-size: 1.2rem
+}
+
+.marquee {
+  width: var(--marquee-width);
+  height: var(--marquee-height);
+  color: var(--color-text);
+  overflow: hidden;
+	position: relative;
+	margin: 2rem auto;
+}
+.marquee:before,
+.marquee:after {
+  position: absolute;
+  top: 0;
+  width: 10rem;
+  height: 100%;
+  content: "";
+  z-index: 1;
+}
+.marquee:before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg) 0%, transparent 100%);
+}
+.marquee:after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg) 0%, transparent 100%);
+}
+.marquee-content {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  animation: scrolling var(--marquee-animation-duration) linear infinite;
+}
+
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrolling {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements))); }
+}
+.marquee-content li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: var(--marquee-element-width);
+  max-height: 100%;
+  font-size: calc(var(--marquee-height) * 3 / 4); /* 5rem; */
+  white-space: nowrap;
+}
+
+/* Contact */
+.contact .modal-body {
+	display: block;
+}
+
+.contact-text {
+	padding-bottom: 3.125rem;
+}
+
+.folio-form .form-control {
+	display: block;
+	max-width: 500px;
+	width: 100%;
+	color: var(--color-text);
+	padding-bottom: 5px;
+	border-top: none;
+	padding-left: 0;
+	padding-right: 0;
+	border-right: 0;
+	border-left: 0;
+	border-radius: 0;
+	background: transparent;
+	line-height: 26px;
+	margin-bottom: 40px;
+	border-bottom: 1px solid var(--border);
+	outline: none;
+}
+
+.folio-form .form-control::placeholder {
+	color: var(--border);
+}
+
+@media (max-width: 991px) {
+.about-img,
+.about-text {
+	flex: initial;
+	margin: auto;
+}
+.page-block { text-align: center;  }
+}
+
+@media (max-width: 769px) {
+  :root {
+		--marquee-width: 100%;
+    --marquee-height: 16vh;
+    --marquee-elements-displayed: 3;
+  }
+  .marquee:before, .marquee:after { width: 5rem; }
+}

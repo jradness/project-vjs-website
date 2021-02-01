@@ -1,60 +1,87 @@
-const toggleTheme = document.querySelector('.theme-tab');
-const switcher = document.querySelectorAll('.switcher-btn');
-const currentTheme = localStorage.getItem('theme');
-
-const filterLink = document.querySelectorAll('[data-filter]');
-const portfolioItems = document.querySelectorAll('.portfolio-card');
-const searchBox = document.querySelector('#search');
-
-const siteModal = document.querySelector('.site-wrapper');
-
-const openElms = document.querySelectorAll('[data-open]');
-const closeElms = document.querySelectorAll('[data-close]');
+const theme = 'theme'
+const dataTheme = 'data-theme';
+const themeTab = '.theme-tab'
+const switcherBtn = '.switcher-btn'
+const portFolioCard = '.portfolio-card';
+const search = '#search';
+const modal = '.site-wrapper';
+const dataFilter = '[data-filter]';
+const dataOpen = '[data-open]';
+const dataClose = '[data-close]';
 const isVisible = "is-visible";
+const dark = 'dark';
+const light = 'light';
+const active = 'active';
+const open = 'open';
+
+const root = document.documentElement;
+/* Theme */
+const toggleTheme = document.querySelector(themeTab);
+const switcher = document.querySelectorAll(switcherBtn);
+const currentTheme = localStorage.getItem(theme);
+
+/* Portfolio */
+const filterLink = document.querySelectorAll(dataFilter);
+const portfolioItems = document.querySelectorAll(portFolioCard);
+const searchBox = document.querySelector(search);
+
+/* Modal */
+const siteModal = document.querySelector(modal);
+const openModal = document.querySelectorAll(dataOpen);
+const closeModal = document.querySelectorAll(dataClose);
+
+const sections = document.querySelectorAll('section');
+
 
 const setTheme = (elm) => {
-	if (elm === 'dark') {
-		document.documentElement.setAttribute('data-theme', 'dark');
-		localStorage.setItem('theme', 'dark');
+	if (elm === dark) {
+		root.setAttribute(dataTheme, dark);
+		localStorage.setItem(theme, dark);
 	} else {
-		document.documentElement.setAttribute('data-theme', 'light');
-		localStorage.setItem('theme', 'light');
+		root.setAttribute(dataTheme, light);
+		localStorage.setItem(theme, light);
 	}
 }
 
 const setActive = (elm, selector) => {
-	if (document.querySelector(`${selector}.active`) !== null) {
-		document.querySelector(`${selector}.active`).classList.remove('active');
+	if (document.querySelector(`${selector}.${active}`) !== null) {
+		document.querySelector(`${selector}.${active}`).classList.remove(active);
 	}
-	elm.classList.add('active');
+	elm.classList.add(active);
+}
+
+const setSectionDisplay = (display = 'block') => {
+	sections.forEach((section) => {
+		section.style.display = display;
+	});
 }
 
 if (currentTheme) {
-	document.documentElement.setAttribute('data-theme', currentTheme);
+	root.setAttribute(dataTheme, currentTheme);
 	switcher.forEach((btn) => {
-		btn.classList.remove('active');
+		btn.classList.remove(active);
 	});
 
-	if (currentTheme === 'dark') {
-		switcher[1].classList.add('active')
+	if (currentTheme === dark) {
+		switcher[1].classList.add(active)
 	} else {
-		switcher[0].classList.add('active')
+		switcher[0].classList.add(active)
 	}
 }
 
 toggleTheme.addEventListener('click', function() {
 	const tab = this.parentElement.parentElement;
-	if (!tab.className.includes('open')) {
-		tab.classList.add('open');
+	if (!tab.className.includes(open)) {
+		tab.classList.add(open);
 	} else {
-		tab.classList.remove('open');
+		tab.classList.remove(open);
 	}
 });
 
 for (const elm of switcher) {
 	elm.addEventListener('click', function() {
 		const toggle = this.dataset.toggle;
-		setActive(elm, '.switcher-btn');
+		setActive(elm, switcherBtn);
 		setTheme(toggle);
   });
 }
@@ -92,23 +119,27 @@ searchBox.addEventListener('keyup', (e) => {
 
 
 // Full Site Modal "Open Buttons"
-for (const elm of openElms) {
+for (const elm of openModal) {
   elm.addEventListener('click', function() {
     const modalId = this.dataset.open;
-    document.getElementById(modalId).classList.add(isVisible);
+		document.getElementById(modalId).classList.add(isVisible);
+		
+		if (modalId === 'about' || modalId === 'contact') {
+			setSectionDisplay('none');
+		}
   });
 }
 // Full Site Modal "Close Buttons"
-for (const elm of closeElms) {
+for (const elm of closeModal) {
   elm.addEventListener('click', function() {
-    this.parentElement.parentElement.classList.remove(isVisible);
+		this.parentElement.parentElement.parentElement.classList.remove(isVisible);
+		setSectionDisplay('block');
   });
 }
 
 
 // Modal
 document.addEventListener('click', (e) => {
-	console.log('doc event');
 	
   if (e.target == document.querySelector(".modal.is-visible")) {
     document.querySelector(".modal.is-visible").classList.remove(isVisible);
@@ -121,8 +152,6 @@ document.addEventListener('keyup', (e) => {
     document.querySelector(".modal.is-visible").classList.remove(isVisible);
   }
 });
-
-
 
 // Carousel
 const base = './assets/images/';
@@ -174,3 +203,13 @@ const gotoNum = (number) => {
 }
 
 update();
+
+
+const marqueeElmsDisplayed = getComputedStyle(root).getPropertyValue('--marquee-elements-displayed');
+const marqueeContent = document.querySelector('ul.marquee-content');
+
+root.style.setProperty('--marquee-elements', marqueeContent.children.length);
+
+for (let i = 0; i < marqueeElmsDisplayed; i += 1) {
+  marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+}

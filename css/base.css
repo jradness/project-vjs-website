@@ -1,3 +1,16 @@
+:root {
+	--animate-duration: 1s;
+	--animate-delay: 1s;
+	--animate-repeat: 1;
+	--bounceEasing: cubic-bezier(0.51, 0.92, 0.24, 1.15);
+
+	--marquee-width: 80vw;
+  --marquee-height: 15vh;
+  --marquee-elements-displayed: 5;
+  --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
+  --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
+}
+
 article,
 section,
 footer,
@@ -36,6 +49,8 @@ h4 {
 	margin-top: 0.25rem;
 	margin-bottom: 0.5rem;
 }
+
+p { margin-top: 0; }
 
 button { outline: none; }
 
@@ -83,7 +98,7 @@ button:not(:disabled):not(.disabled) {
 	letter-spacing: -2px;
 }
 
-.par {
+.sub-header {
 	font-size: 1.3125rem;
 	line-height: 1.5;
 	padding-top: 1.25rem;
@@ -123,3 +138,11 @@ button:not(:disabled):not(.disabled) {
 	align-items: center;
 }
 
+@media (max-width: 400px) {
+	.header-lg {
+		font-size: 3rem;
+		line-height: initial;	
+	}
+	
+	.header-md { font-size: 2rem; }
+}

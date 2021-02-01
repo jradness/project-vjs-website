@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="./css/theme.css">
 	<link rel="stylesheet" href="./css/base.css">
 	<link rel="stylesheet" href="./css/styles.css">
+	<link rel="stylesheet" href="./css/pages.css">
 	<title>Document</title>
 </head>
 <body>
@@ -51,7 +52,7 @@
 					</span>
 					<div class="hero-message">
 						<h2 class="header-lg">Code. Eat. Sleep.</h2>
-						<div class="par">I create meaningful solutions for your brands and products.
+						<div class="sub-header">I create meaningful solutions for your brands and products.
 							<br/>
 							Give your customers the best experience possible.</div>
 					</div>
@@ -62,6 +63,7 @@
 			</div>
 		</section>
 
+		<!-- Portfolio Section -->
 		<section class="portfolio-section">
 			<div class="container">
 				<div class="search-container">
@@ -76,11 +78,9 @@
 					<li class="filter-link" data-filter="apps">App Development</li>
 					<li class="filter-link" data-filter="ui">UI Design</li>
 				</ul>
-
 			</div>
 				<div class="container-fluid">
 					<div class="portfolio-grid">
-						
 						
 						<div id="web" class="portfolio-card" data-item="web" data-open="web-1">
 							<div class="card-body">
@@ -165,6 +165,7 @@
 				</div>
 		</section>
 
+		<!-- Reviews Section -->
 		<section class="reviews section-spacer">
 			<div class="review-title">What People Say</div>
 			<h2 class="header-md">Trusted by Clients.</h2>
@@ -218,9 +219,7 @@
 							</div>
 						</div>
 					</div>
-					<!-- <img class="item" src="../assets/images/1.jpeg">
-					<img class="item"src="../assets/images/2.jpeg">
-					<img class="item" src="../assets/images/3.jpeg"> -->
+
 				</div>
 				<div class="slide-ctrl-container flex-j-center">
 					<button class="slide-ctrl">
@@ -233,42 +232,231 @@
 			</div>
 		</section>
 	
-		<!-- About Modal -->
-		<div class="full-site-modal about-block" id="about" data-animation="zoomInOut">
-			<div class="page-header container-fluid">
-				<div class="brand-logo">Logo</div>
-				<button class="close-modal" aria-label="close modal" data-close>x</button>
+		<!-- ** MODALS ** -->
+		<!-- About Page Modal -->
+		<div class="full-site-modal page-block" id="about" data-animation="zoomInOut">
+			<div class="container-fluid about">
+				<header class="modal-header">
+					<h3>ABOUT PAGE</h3>
+					<i class="fas fa-times" aria-label="close modal" data-close></i>
+				</header>
+				<div class="modal-body">
+					<div class="about-img">
+						<img src="./assets/images/4.jpg" alt="head shot">
+					</div>
+					<div class="about-text">
+						<h2 class="header-md">Jason Brewer</h2>
+						<p>Full Stack Developer based in Texas, USA. Nobody can see how elegant my code is...so I snapshot it, frame it, and hang it on my wall.</p>
+						<p>I write code like I diet - lean. jk. It's more like Taco Bell Beefy 5 Layer Burritos...which is still leaner than some other foods.</p>
+						<div class="contact-me-block">
+							<div>Email Me:</div>
+							<a href="mailto:jason@devslopes.com">jason@devslopes.com</a>
+						</div>
+					</div>
+				</div>
+				<div class="marquee">
+					<ul class="marquee-content">
+						<li><i class="fab fa-github"></i></li>
+						<li><i class="fab fa-codepen"></i></li>
+						<li><i class="fab fa-dev"></i></li>
+						<li><i class="fab fa-react"></i></li>
+						<li><i class="fab fa-vuejs"></i></li>
+						<li><i class="fab fa-angular"></i></li>
+						<li><i class="fab fa-node"></i></li>
+						<li><i class="fab fa-aws"></i></li>
+						<li><i class="fab fa-docker"></i></li>
+						<li><i class="fab fa-android"></i></li>
+					</ul>
+				</div>
 			</div>
-			<div class="modal-body">ABOUT</div>
-		</div>
-		<!-- Contact Modal -->
-		<div class="full-site-modal contact-block" id="contact" data-animation="zoomInOut">
-			<div class="page-header container-fluid">
-				<div class="brand-logo">Logo</div>
-				<button class="close-modal" aria-label="close modal" data-close>x</button>
-			</div>
-			<div class="modal-body">CONTACT</div>
 		</div>
 
+		<!-- Contact Page Modal -->
+		<div class="full-site-modal page-block" id="contact" data-animation="zoomInOut">
+			<div class="container-fluid contact">
+				<header class="modal-header">
+					<h3>CONTACT PAGE</h3>
+					<i class="fas fa-times" aria-label="close modal" data-close></i>
+				</header>
+				<div class="modal-body">
+					<div class="contact-text">
+						<h2 class="header-md">Jason Brewer</h2>
+						<div class="">Have a project or question? Send me a message</div>
+						<div class="">I will reply within 48 hours.</div>
+					</div>
+					<form class="folio-form">
+						<input name="name" class="form-control" type="text" placeholder="Name">
+						<input name="email" class="form-control" type="email" placeholder="Email">
+						<input name="subject"class="form-control" type="text" placeholder="Subject">
+						<textarea class="form-control" name="message" cols="30" rows="3" placeholder="Write your message"></textarea>
+						<input type="submit" value="send" class="btn btn-primary rounded-pill hero-cta">
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- Web 1 -->
 		<div class="modal" id="web-1" data-animation="slideInOutTop">
 			<div class="modal-dialog">
-				<div class="brand-logo">Logo</div>
-				<button class="close-modal" aria-label="close modal" data-close>x</button>
-				<div class="modal-body">Web Project 1</div>
+				<header class="modal-header">
+					<h3>Web Project 1</h3>
+					<i class="fas fa-times" aria-label="close modal" data-close></i>
+				</header>
+				<div class="modal-body">
+					<div class="img-wrapper">
+						<img src="./assets/images/portfolio-1.jpg" alt="portfolio item">
+					</div>
+					<div class="text-wrapper">
+						<p><strong>My first awesome website</strong></p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo repellendus reprehenderit accusamus totam ratione!</p>
+						<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, </p>
+					</div>
+				</div>
 			</div>
 		</div>
-
+		
+		<!-- Web 2 -->
+		<div class="modal" id="web-2" data-animation="slideInOutTop">
+			<div class="modal-dialog">
+				<header class="modal-header">
+					<h3>Web Project 2</h3>
+					<i class="fas fa-times" aria-label="close modal" data-close></i>
+				</header>
+				<div class="modal-body">
+					<div class="img-wrapper">
+						<img src="./assets/images/portfolio-2.jpg" alt="portfolio item">
+					</div>
+					<div class="text-wrapper">
+						<p><strong>My Second awesome website</strong></p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo repellendus reprehenderit accusamus totam ratione!</p>
+						<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, </p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- App 1 -->
 		<div class="modal" id="app-1" data-animation="slideInOutTop">
 			<div class="modal-dialog">
-				<div class="brand-logo">Logo</div>
-				<button class="close-modal" aria-label="close modal" data-close>x</button>
-				<div class="modal-body">APP Project 1</div>
+				<header class="modal-header">
+					<h3>App Project 1</h3>
+					<i class="fas fa-times" aria-label="close modal" data-close></i>
+				</header>
+				<div class="modal-body">
+					<div class="img-wrapper">
+						<img src="./assets/images/portfolio-3.jpg" alt="portfolio item">
+					</div>
+					<div class="text-wrapper">
+						<p><strong>My First awesome app</strong></p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo repellendus reprehenderit accusamus totam ratione!</p>
+						<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, </p>
+					</div>
+				</div>
 			</div>
 		</div>
-
+		
+		<!-- App 2 -->
+		<div class="modal" id="app-2" data-animation="slideInOutTop">
+			<div class="modal-dialog">
+				<header class="modal-header">
+					<h3>App Project 2</h3>
+					<i class="fas fa-times" aria-label="close modal" data-close></i>
+				</header>
+				<div class="modal-body">
+					<div class="img-wrapper">
+						<img src="./assets/images/portfolio-4.jpg" alt="portfolio item">
+					</div>
+					<div class="text-wrapper">
+						<p><strong>My Second awesome app</strong></p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo repellendus reprehenderit accusamus totam ratione!</p>
+						<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, </p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Web 3 -->
+		<div class="modal" id="web-3" data-animation="slideInOutTop">
+			<div class="modal-dialog">
+				<header class="modal-header">
+					<h3>Web Project 3</h3>
+					<i class="fas fa-times" aria-label="close modal" data-close></i>
+				</header>
+				<div class="modal-body">
+					<div class="img-wrapper">
+						<img src="./assets/images/portfolio-5.jpg" alt="portfolio item">
+					</div>
+					<div class="text-wrapper">
+						<p><strong>My Third awesome website</strong></p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo repellendus reprehenderit accusamus totam ratione!</p>
+						<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, </p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- UI 1 -->
+		<div class="modal" id="ui-1" data-animation="slideInOutTop">
+			<div class="modal-dialog">
+				<header class="modal-header">
+					<h3>UI Project 1</h3>
+					<i class="fas fa-times" aria-label="close modal" data-close></i>
+				</header>
+				<div class="modal-body">
+					<div class="img-wrapper">
+						<img src="./assets/images/portfolio-6.jpg" alt="portfolio item">
+					</div>
+					<div class="text-wrapper">
+						<p><strong>My First awesome UI</strong></p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo repellendus reprehenderit accusamus totam ratione!</p>
+						<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<!-- UI 2 -->
+		<div class="modal" id="ui-2" data-animation="slideInOutTop">
+			<div class="modal-dialog">
+				<header class="modal-header">
+					<h3>UI Project 2</h3>
+					<i class="fas fa-times" aria-label="close modal" data-close></i>
+				</header>
+				<div class="modal-body">
+					<div class="img-wrapper">
+						<img src="./assets/images/portfolio-7.jpg" alt="portfolio item">
+					</div>
+					<div class="text-wrapper">
+						<p><strong>My Second awesome UI</strong></p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo repellendus reprehenderit accusamus totam ratione!</p>
+						<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, </p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- App 3 -->
+		<div class="modal" id="app-3" data-animation="slideInOutTop">
+			<div class="modal-dialog">
+				<header class="modal-header">
+					<h3>App Project 3</h3>
+					<i class="fas fa-times" aria-label="close modal" data-close></i>
+				</header>
+				<div class="modal-body">
+					<div class="img-wrapper">
+						<img src="./assets/images/portfolio-8.jpg" alt="portfolio item">
+					</div>
+					<div class="text-wrapper">
+						<p><strong>My Third awesome App</strong></p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo repellendus reprehenderit accusamus totam ratione!</p>
+						<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, </p>
+					</div>
+				</div>
+			</div>
+		</div>
 	</main>
 
-		
-		<script src="../js/main.js"></script>
+	<script src="../js/main.js"></script>
+
 </body>
 </html>
