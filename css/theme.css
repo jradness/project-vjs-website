@@ -1,4 +1,4 @@
-[data-theme='light'] {
+:root {
 	--bg: #fff;
 	--bg-panel: #fff;
 	--color-headings: #161c2d;

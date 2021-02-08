@@ -11,7 +11,6 @@
   --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
 }
 
-article,
 section,
 footer,
 header,
@@ -53,6 +52,29 @@ h4 {
 p { margin-top: 0; }
 
 button { outline: none; }
+
+.container,
+.container-fluid {
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.container {
+	max-width: 1140px;
+}
+
+.section-spacer {
+	margin: 3rem 0;
+}
+
+.ul-defaults-none {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
 
 .btn {
 	font-weight: 700;
@@ -105,28 +127,6 @@ button:not(:disabled):not(.disabled) {
 	padding-bottom: 1.875rem;
 }
 
-.container,
-.container-fluid {
-	width: 100%;
-	padding-right: 15px;
-	padding-left: 15px;
-	margin-right: auto;
-	margin-left: auto;
-}
-
-.container {
-	max-width: 1140px;
-}
-
-.section-spacer {
-	margin: 3rem 0;
-}
-
-.ul-defaults-none {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
 
 .flex-j-center {
 	display: flex;

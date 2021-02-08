@@ -157,12 +157,13 @@ document.addEventListener('keyup', (e) => {
 const base = './assets/images/';
 const slides = document.querySelectorAll(".review-item");
 const button = document.querySelectorAll(".slide-ctrl");
+
 const images = [
-	`${base}1.jpeg`,
-	`${base}2.jpeg`,
-	`${base}3.jpeg`,
-	`${base}4.jpg`,
-	'http://via.placeholder.com/500x500'
+	`${base}img1.jpg`,
+	`${base}img2.jpg`,
+	`${base}img3.jpg`,
+	`${base}img4.jpg`,
+	`${base}img5.jpg`,
 ];
 
 let current = Math.floor(Math.random() * slides.length);
@@ -194,10 +195,10 @@ const gotoNum = (number) => {
 	newIndex = (newIndex < images.length - 1) ? newIndex + 1 : 0;
 	prev = current > 0 ? current - 1 : slides.length - 1;
 	next = current < slides.length - 1 ? current + 1 : 0;
-
-	setAttr(slides[current], 'src', images[newIndex]);
-	setAttr(slides[prev], 'src', images[prev]);
-	setAttr(slides[next], 'src', images[next]);
+	
+	// setAttr(slides[current].querySelector('img'), 'src', images[newIndex]);
+	// setAttr(slides[prev].querySelector('img'), 'src', images[prev]);
+	// setAttr(slides[next].querySelector('img'), 'src', images[next]);
 	
   update();
 }

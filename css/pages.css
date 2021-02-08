@@ -123,11 +123,11 @@
 .page-block { text-align: center;  }
 }
 
-@media (max-width: 769px) {
+@media (max-width: 768px) {
   :root {
 		--marquee-width: 100%;
     --marquee-height: 16vh;
     --marquee-elements-displayed: 3;
   }
-  .marquee:before, .marquee:after { width: 5rem; }
+	.marquee:before, .marquee:after { width: 5rem; }
 }

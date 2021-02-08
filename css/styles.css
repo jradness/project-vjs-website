@@ -278,6 +278,7 @@
 .reviews {
 	text-align: center;
 	position: relative;
+	overflow: hidden;
 }
 
 .reviews .review-title {
@@ -291,10 +292,10 @@
 
 .review-preview {
 	position: absolute;
-	top: -7rem;
+	top: -3rem;
 	opacity: .5;
 	pointer-events: none;
-	max-width: 500px;
+	max-width: 400px;
 	left: 0;
 	right: 0;
 	margin: 0 auto;
