@@ -87,14 +87,14 @@ for (const elm of switcher) {
 }
 
 filterLink.forEach((link)=> {
-	link.addEventListener('click', (e) => {
-		e.preventDefault()
-		const filter = e.target.dataset.filter;
+	link.addEventListener('click', function() {
+		// e.preventDefault()
+		const filter = this.dataset.filter;
 		setActive(link, '.filter-link');
 		portfolioItems.forEach((item) => {
 			if (filter === 'all'){
 				item.style.display = 'block'
-			} else if (item.getAttribute('id') === filter) {
+			} else if (item.dataset.item === filter) {
 				item.style.display = 'block'
 			} else {
 				item.style.display = 'none'
@@ -106,10 +106,10 @@ filterLink.forEach((link)=> {
 
 searchBox.addEventListener('keyup', (e) => {
 	// trim() removes white space
-	const searchFilter = e.target.value.toLowerCase().trim();
+	const searchFilter = this.value.toLowerCase().trim();
 	
 	portfolioItems.forEach((item) => {
-		if (item.getAttribute('id').includes(searchFilter)){
+		if (item.getAttribute('data-item').includes(searchFilter)){
 			item.style.display = 'block'
 		} else {
 			item.style.display = 'none'
@@ -140,8 +140,9 @@ for (const elm of closeModal) {
 
 // Modal
 document.addEventListener('click', (e) => {
+	console.log(e.target, document.querySelector(".modal.is-visible"));
 	
-  if (e.target == document.querySelector(".modal.is-visible")) {
+  if (e.target === document.querySelector(".modal.is-visible")) {
     document.querySelector(".modal.is-visible").classList.remove(isVisible);
   }
 });
